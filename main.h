@@ -30,9 +30,10 @@
  * @minus_flag: on if_flag specified
  *
  * @width: field width specified
- * @precision: field precision specifieda
+ * @precision: field precision specified
+ *
  * @h_modifier: on if h_modifier is specified
- * @l_modifier: on if l_modifier is specifieda
+ * @l_modifier: on if l_modifier is specified
 */
 typedef struct parameters
 {
