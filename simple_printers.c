@@ -7,7 +7,7 @@
 * @except: except address
 * Return: number bytes printed
 */
-int print from_to(char *start, char *stop, char *except)
+int print_from_to(char *start, char *stop, char *except)
 {
 int sum = 0;
 while (start <= stop)
@@ -28,7 +28,7 @@ return (sum);
 int print_rev(va_list ap, params_t *params)
 {
 int len, sum = 0;
-char *strl = va_arg(ap, char *);
+char *str = va_arg(ap, char *);
 (void) params;
 
 if (str)
@@ -55,7 +55,7 @@ char arr[] =
 
 "NOPQRSTUVWXYZABCDEFGHIJKLM	nopqrstuvwxyzabcdefghijklm";
 char *a = va_arg(ap, char *);
-(void) params; I
+(void) params;
 
 i = 0;
 index = 0;

@@ -7,7 +7,7 @@
 
 int (*get_specifier(char *s))(va_list ap, params_t *params)
 {
-specifier_t specifiers \[] = {
+specifier_t specifiers[] = {
 {"c", print_char},
 {"d", print_int},
 {"i", print_int},
@@ -18,8 +18,7 @@ specifier_t specifiers \[] = {
 {"u", print_unsigned},
 {"x", print_hex},
 {"X", print_HEX},
-{"p", print_address},
-{"s", print_s},
+{"s", print_S},
 {"r", print_rev},
 {"R", print_rot13},
 {NULL, NULL}
@@ -43,9 +42,9 @@ return (NULL);
 * @params: the parameters struct
 * Return: the number of bytes printeda
 */
-int get_print_func(char s, va_list ap, params_t *params)
+int get_print_func(char *s, va_list ap, params_t *params)
 {
-int (*f)(va_list, params_t*) = get_specifier(s);
+int (*f)(va_list, params_t *) = get_specifier(s);
 
 if (f)
 return (f(ap, params));
@@ -54,7 +53,7 @@ return (0);
 /**
 * get_flag - finds the flag func
 * @s: the format string
-* @params: the parameters struc
+* @params: the parameters struct
 * Return: if flag was valid
 */
 
@@ -65,20 +64,19 @@ int i = 0;
 switch (*s)
 {
 case '+':
-
-i = params->plus flag = 1;
+	i = params->plus_flag = 1;
 break;
 case ' ':
-i = params->space_flag = 1;
+	i = params->space_flag = 1;
 break;
 case '#':
-i = params->hashtag_flag = 1;
+	i = params->hashtag_flag = 1;
 break;
 case '-':
-i = params->minus_flag = 1;
+	i = params->minus_flag = 1;
 break;
 case '0':
-i = params->zero flag = 1;
+	i = params->zero_flag = 1;
 break;
 }
 return (1);
@@ -118,13 +116,13 @@ int d = 0;
 if (*s == '*')
 {
 d = va_arg(ap, int);
-S++;
+s++;
 }
 else
 {
 while (_isdigit(*s))
 
-d = d * 10 + (*s++ - 0');
+d = d * 10 + (*s++ - '0');
 }
 params->width = d;
 return (s);

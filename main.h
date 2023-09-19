@@ -1,17 +1,10 @@
 #ifndef _PRINTF_H
-
 #define _PRINTF_H
 
-
-
 #include <stdarg.h>
-
 #include <stdio.h>
-
 #include <unistd.h>
-
 #include <limits.h>
-
 #include <stdlib.h>
 
 #define OUTPUT_BUF_SIZE 1024
@@ -35,8 +28,8 @@
  * @minus_flag: on if_flag specified
  * @width: field width specified
  * @precision: field precision specifieda
- * @h_modifier: on if h modifier is specified
- * @l_modifier: on if 1 modifier is specifieda
+ * @h_modifier: on if h_modifier is specified
+ * @l_modifier: on if l_modifier is specifieda
 */
 typedef struct parameters
 {
