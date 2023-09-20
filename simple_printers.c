@@ -56,6 +56,7 @@ char arr[] =
 "NOPQRSTUVWXYZABCDEFGHIJKLM	nopqrstuvwxyzabcdefghijklm";
 char *a = va_arg(ap, char *);
 (void)params;
+	/*prints capital and small letters*/
 
 i = 0;
 index = 0;
