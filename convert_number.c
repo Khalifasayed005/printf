@@ -8,7 +8,7 @@
  * Return: bytes printed
 */
 
-int _print_hex(va_list ap, params_t *params)
+int print_hex(va_list ap, params_t *params)
 {
 	unsigned long l;
 	int c = 0;
