@@ -35,7 +35,7 @@ int print_hex(va_list ap, params_t *params)
  * print_HEX - prints unsigned hex numbers in uppercase
  * @ap: the argument pointer
  * @params: the parameters struct
- * 
+ *
  * Return: bytes printed
 */
 
