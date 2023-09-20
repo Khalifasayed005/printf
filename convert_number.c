@@ -51,6 +51,7 @@ int print_HEX(va_list ap, params_t *params)
 		l = (unsigned short int)va_arg(ap, unsigned int);
 	else
 		l = (unsigned int)va_arg(ap, unsigned int);
+	/*all possible values of l*/
 
 	str = convert(l, 16, CONVERT_UNSIGNED, params);
 	if (params->hashtag_flag && l)
