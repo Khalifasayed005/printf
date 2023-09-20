@@ -25,16 +25,17 @@ specifier_t specifiers[] = {
 };
 int i = 0;
 
-while (specifiers[i].specifier)
-{
-if (*s == specifiers[i].specifier[0])
-{
-return (specifiers[i].f);
+	while (specifiers[i].specifier)
+	{
+		if (*s == specifiers[i].specifier[0])
+		{
+			return (specifiers[i].f);
+		}
+		i++;
+	}
+	return (NULL);
 }
-i++;
-}
-return (NULL);
-}
+
 /**
 * get_print_func - finds the format funch
 * @s: the format string

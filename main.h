@@ -84,6 +84,7 @@ int print_unsigned(va_list ap, params_t *params);
 int print_address(va_list ap, params_t *params);
 
 /* specifier.c module */
+
 int (*get_specifier(char *s))(va_list ap, params_t *params);
 int get_print_func(char *s, va_list ap, params_t *params);
 int get_flag(char *s, params_t *params);
